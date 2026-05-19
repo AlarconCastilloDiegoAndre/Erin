@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tienda Online</title>
+    <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos-pagina.css">
+</head>
+<body>
+
+<div id="pagina"><!--Inicio de página-->
+
+<header id="cabecera"><!--Inicio de cabecera-->
+		<img src="../imagenes/cabecera.jpg">
+</header><!--Cierre de cabecera-->
+
+<nav id="menu"><!--Inicio de menú-->
+    <ul>
+        <li><a href="../quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
+        <li><a href="../trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
+        <li><a href="../especificaciones/nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
+        <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+        <li><a href="../pagina-web.html" title="INICIO">INICIO</a></li>
+        <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+    </ul>       
+</nav><!--Cierre de menú-->
+
+    <h1>Tienda Online:</h1>
+        <p>Selecciona una categoría y haz clic en cualquier imagen del mosaico para adquirirla</p>
+
+<!-- 4 IMÁGENES PRINCIPALES EN UNA LÍNEA -->
+    <main class="categorias-linea">
+        <div class="tarjeta-categoria" onclick="mostrarCategoria('paisajes')">
+            <img src="../fotos/p-mexico.jpg" alt="Paisajes">
+            <div class="capa-nombre"><span>Paisajes</span></div>
+        </div>
+        <div class="tarjeta-categoria" onclick="mostrarCategoria('retrato')">
+            <img src="../fotos/p.r-pao.jpg" alt="Retrato">
+            <div class="capa-nombre"><span>Retrato</span></div>
+        </div>
+        <div class="tarjeta-categoria" onclick="mostrarCategoria('eventos')">
+            <img src="../fotos/e-vela.jpg" alt="Eventos">
+            <div class="capa-nombre"><span>Eventos</span></div>
+        </div>
+        <div class="tarjeta-categoria" onclick="mostrarCategoria('producto')">
+            <img src="../fotos/p-vino.jpg" alt="Producto">
+            <div class="capa-nombre"><span>Producto</span></div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN DEL MOSAICO (ROMPECABEZAS) -->
+    <section id="contenedor-detalle" class="contenedor-detalle oculto">
+        
+        <!-- Mosaico de Paisajes -->
+    <div id="galeria-paisajes" class="galeria-especifica oculto">
+        <h2>Categoría: Paisajes</h2>
+            <div class="mosaico-rompecabezas">
+                <img src="../fotos/p.p-barco.jpg" alt="barco y mar" onclick="seleccionarParaComprar(this, 'PAI')">
+                <img src="../fotos/p-mexico.jpg" alt="bellas artes" onclick="seleccionarParaComprar(this, 'PAI')">
+                <img src="../fotos/p-peña.jpg" alt="peña de bernal" onclick="seleccionarParaComprar(this, 'PAI')">
+                <img src="../fotos/p-queretaro.jpg" alt="los arcos" onclick="seleccionarParaComprar(this, 'PAI')">
+            </div>
+    </div>
+
+    <!-- Mosaico de Retrato -->
+    <div id="galeria-retrato" class="galeria-especifica oculto">
+        <h2>Categoría: Retrato</h2>
+            <div class="mosaico-rompecabezas">
+                <img src="../fotos/r-sonrisa.jpg" alt="sonrisa" onclick="seleccionarParaComprar(this, 'RET')">
+                <img src="../fotos/r-risa.jpg" alt="risa congelada" onclick="seleccionarParaComprar(this, 'RET')">
+                <img src="../fotos/r-espejo.jpg" alt="dentro del espejo" onclick="seleccionarParaComprar(this, 'RET')">
+                <img src="../fotos/r-flor.jpg" alt="mi jardín" onclick="seleccionarParaComprar(this, 'RET')">
+            </div>
+    </div>
+
+    <!-- Mosaico de Eventos -->
+    <div id="galeria-eventos" class="galeria-especifica oculto">
+        <h2>Categoría: Eventos</h2>
+            <div class="mosaico-rompecabezas">
+                <img src="../fotos/e-sintonia.jpg" alt="ballet" onclick="seleccionarParaComprar(this, 'EVE')">
+                <img src="../fotos/p.e-guitarra.jpg" alt="concierto" onclick="seleccionarParaComprar(this, 'EVE')">
+                <img src="../fotos/e-musica.jpg" alt="presentación" onclick="seleccionarParaComprar(this, 'EVE')">
+            </div>
+    </div>
+
+    <!-- Mosaico de Producto -->
+    <div id="galeria-producto" class="galeria-especifica oculto">
+            <h2>Categoría: Producto</h2>
+            <div class="mosaico-rompecabezas">
+                <img src="../fotos/p-cerveza.jpg" alt="cerveza" onclick="seleccionarParaComprar(this, 'PRO')">
+                <img src="../fotos/p-vino.jpg" alt="vino" onclick="seleccionarParaComprar(this, 'PRO')">
+                <img src="../fotos/p-hamburguesa.jpg" alt="hamburguesa" onclick="seleccionarParaComprar(this, 'PRO')">
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SECCIÓN DE COMPRA (INICIA OCULTA HASTA QUE SE SELECCIONA UNA FOTO DEL MOSAICO) -->
+    <section id="zona-formulario-compra" class="contenedor-compra oculto">
+        <div class="compra-layout">
+            
+            <!-- Vista previa dinámica de la foto que eligieron -->
+            <div class="compra-imagen">
+                <img src="" alt="Tu selección" id="foto-formulario-dinamica">
+                <div class="info-foto-ayuda">Obra seleccionada</div>
+            </div>
+
+            <!-- Formulario con especificaciones exactas -->
+            <div class="compra-formulario">
+                <form id="formulario-pedido" onsubmit="enviarPedido(event)">
+                    
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="campo-form">
+                        <label>Nombre completo:</label>
+                        <input type="text" id="nombre" required placeholder="Ingresa tu nombre">
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Correo electrónico:</label>
+                        <input type="email" id="correo" required placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <div class="campo-form">
+                        <label>WhatsApp/Teléfono:<span class="opcional">(Opcional, para seguimiento rápido)</span></label>
+                        <input type="tel" id="telefono" placeholder="Ej.+52 1...">
+                    </div>
+
+                    <h3>Selección de la Obra</h3>
+                    
+                    <div class="campo-form">
+                        <label>Descripción de la obra:</label>
+                        <textarea id="descripcion-obra" rows="3" required placeholder="Detalles o nombre de la obra seleccionada..."></textarea>
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Categoría:</label>
+                        <div class="grupo-opciones">
+                            <label class="opcion-check"><input type="radio" name="categoria" value="PAI" id="cat-PAI"> Paisaje-PAI</label>
+                            <label class="opcion-check"><input type="radio" name="categoria" value="NAT" id="cat-NAT"> Retrato-RET</label>
+                            <label class="opcion-check"><input type="radio" name="categoria" value="CON/RET" id="cat-CON-RET"> Eventos-EVE</label>
+                            <label class="opcion-check flex-otro">
+                                <input type="radio" name="categoria" value="PRO" id="cat-PRO"> [ ] Producto 
+                                <input type="text" id="texto-otro-campo" placeholder="_________" onclick="marcarOtroRadio()"> -PRO
+                            </label>
+                        </div>
+                    </div>
+
+                    <h3>Especificaciones de Uso</h3>
+                    
+                    <div class="campo-form">
+                        <label>Tipo de Licencia/Uso:</label>
+                        <div class="grupo-opciones">
+                            <label class="opcion-check"><input type="radio" name="licencia" value="Personal" required> Uso Personal:(Decoración, fondo de pantalla, impresión para casa).</label>
+                            <label class="opcion-check"><input type="radio" name="licencia" value="Comercial"> Uso Comercial:(Publicidad, sitio web, redes sociales de una marca, editorial).</label>
+                        </div>
+                    </div>
+
+                    <div class="campo-form">
+                        <label>Formato de entrega:</label>
+                        <div class="grupo-opciones">
+                            <label class="opcion-check"><input type="radio" name="formato" value="Digital" required> Digital en Alta Resolución:(Para que tú la imprimas o la uses en medios digitales).</label>
+                            <label class="opcion-check"><input type="radio" name="formato" value="Fisico"> Impresión Física: (Se manda imprimir y se envia).</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Pedido</button>
+                </form>
+
+                <div id="mensaje-confirmacion" class="mensaje-exito oculto">
+                    ¡Gracias por tu interés en mi trabajo! Como diseñadora y autora de estas piezas, me pondré en contacto contigo en un plazo de 24 a 48 horas para enviarte la cotización formal y los métodos de pago,  Al ser una marca personal, la compra de la imagen otorga el derecho de uso, pero la autoría sigue perteneciendo a Erin Lira Castillo.
+                    <em>– Erin Lira.</em>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../javascript/js.js"></script>
+
+<footer id="pie"><!--Inicio de pie-->
+	<img src="../imagenes/abajo.png">
+</footer><!--Cierre de pie-->
+
+</div><!--Cierre de página-->
+
+</body>
+</html>

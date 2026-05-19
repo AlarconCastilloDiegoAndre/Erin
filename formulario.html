@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formularios</title>
+</head>
+<body>
+
+<form name="contacto" action="gracias.html">Son de lista, porque son de linea, 
+	<ul> 
+		<li>Nombre:<input type="text" name="nombre" maxlength="30" placeholder="coloca tu nombre" required></li>required, es para que afuerzas 
+		<li>Apellidos:<input type="text" name="apellidos"></li>
+		<li>Tel:<input type="tel" name="celular"></li>
+		<li>Email:<input type="email" name="email" required></li> Nos pide el caractér de arroba, ya que les estamos diciendo que será un correo electrónico
+		<li>Cantidad:<input type="number" name="cantidad" max="10"></li>Podemos poner solo números, para la cuestión de números 
+		<li>Password:<input type="Password" name="Password"></li>Aqui podemos ver como se ocultan automáticamente la contraseña para aserlo más seguro 
+		<li>Colo:<input type="color" name="color"></li>Te deja ver un selector de color 
+		<li>Colores</li>
+		<li>Rojo:<input type="checkbox" name="color" value="rojo"></li>
+		<li>Amarillo:<input type="checkbox" name="color" value="amarillo"></li>
+		<li>Morado:<input type="checkbox" name="color" value="morado"></li>Mientras que los primeros campos el usuario puede colocar algo, en el checkbox no se tiene forma de ver eso, por ello se agrega el value, para poder saber que fue lo que selecciono.
+		<li>¿Usted debe alcohol?</li>
+		<li>Si<input type="radio" name="alcohol" value="si"></li> radio-es para que se haga un circulo, si le pones el mismo en name, significa que va a lo mismo, que debes responder una u otra para una misma pregunta
+		<li>No<input type="radio" name="alcohol" value="no"></li>
+		<li>Comentarios</li>
+		<li><textarea name="comentarios" rows="6" cols="30"></textarea></li>rows son filas y cols son cuantos caractéres puedes poner, pero solo que sean visibles hasta ellos, para que asi puedas medir la cailla donde se pondra la información
+		<li>Adjunto<input type="file" name="adjunto"></li>Para poder mandar un archivo 
+		<li>Sistema Operativo:</li>
+		<li><select name="so"> 
+			<option value="windows">Windows</option>
+			<option value="macoz">MacOs</option>
+			<option value="linux">Linux</option>
+		</select></li>
+		<li>Fecha<input type="date" name="fecha"></li>
+		<li>Hora<input type="time" name="tiempo"></li>
+		<li><input type="reset" name="borrar" value="borrar"></li>restablece el formulario a lo que antes era 
+		<li><input type="submit" name="enviar" value="envar"></li>
+	</ul>
+</form>
+
+el name - es una etiqueta donde podemos poner una clasificación 
+el tel es para que cuando las personas ingresen al formulario desde el celular, te permite poner en automático el teclado en versión numérica 
+
+
+</body>
+</html>
