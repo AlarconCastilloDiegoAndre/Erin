@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,85 +8,113 @@
 	<link rel="stylesheet" type="text/css" href="css/reticula12.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos-pagina.css">
 </head>
+
 <body>
 
-<div id="pagina"><header class="video-header">
-		<video autoplay muted loop playsinline class="video-background">
-			<source src="202605142108.mp4" type="video/mp4">
-		</video>
-	</header>
+	<div id="pagina">
+		<header class="video-header">
+			<video autoplay muted loop playsinline class="video-background">
+				<source src="202605142108.mp4" type="video/mp4">
+			</video>
+		</header>
 
-	<header id="cabecera">
-		<img src="imagenes/cabecera.jpg" alt="Cabecera ELC">
-	</header>
+		<header id="cabecera">
+			<img src="imagenes/cabecera.jpg" alt="Cabecera ELC">
+		</header>
 
-	<hr>
+		<hr>
 
-	<nav id="menu">
-		<ul id="lista-menu">
-			<li><a href="pagina-web.html" title="INICIO">INICIO</a></li>
-			<li><a href="quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
-			<li><a href="trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
-			<li><a href="especificaciones/nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
-			<li><a href="catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-			<li><a href="tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-			<li><a href="preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-		</ul>		
-	</nav>
+		<nav id="menu">
+			<ul id="lista-menu">
+				<li><a href="pagina-web.html" title="INICIO">INICIO</a></li>
+				<li><a href="quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
+				<li><a href="trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
+				<li><a href="especificaciones/nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
+				<li><a href="catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+				<li><a href="tienda/tienda.html" title="TIENDA">TIENDA</a></li>
+				<li><a href="preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+			</ul>
+		</nav>
 
-	<hr>
+		<hr>
 
-	<div class="contenido-principal">
-		
-		<p class="intro-texto">
-			ELC nació como una idea pequeña durante mis estudios y ha crecido hasta convertirse en lo que es hoy: <strong>mi marca personal.</strong> En este sitio web de mi propia autoría, les comparto una parte esencial de lo que soy y lo que me apasiona crear. Bienvenidos a una de mis formas favoritas para dar a conocer mi interpretación de la comunicación visual.
-		</p>
-		
-		<section class="seccion-contacto">
-			<h2>Contáctame</h2>
-			<p class="subtitulo"><em>"¿Tienes un proyecto en mente o te gustaría colaborar conmigo? Me encantaría escucharte y dar vida a tus ideas a través del diseño y la fotografía."</em></p>
+		<div class="contenido-principal">
 
-			<form name="Contáctame" action="Gracias.html" class="formulario-elegante">
-				<div class="grupo-campo">
-					<label for="nombre">Nombre / Empresa:</label>
-					<input type="text" id="nombre" name="nombre/empresa" maxlength="30" placeholder="Coloca el nombre" required>
+			<div class="fila">
+				<div class="col12">
+					<p class="intro-texto">
+						ELC nació como una idea pequeña durante mis estudios y ha crecido hasta convertirse en lo que es
+						hoy: <strong>mi marca personal.</strong> En este sitio web de mi propia autoría, les comparto
+						una parte esencial de lo que soy y lo que me apasiona crear. Bienvenidos a una de mis formas
+						favoritas para dar a conocer mi interpretación de la comunicación visual.
+					</p>
 				</div>
+			</div>
 
-				<div class="grupo-campo">
-					<label for="email">Correo electrónico:</label>
-					<input type="email" id="email" name="email" maxlength="30" placeholder="Coloca tu email" required>
-				</div> 
+			<div class="fila">
+				<div class="col12">
+					<section class="seccion-contacto">
+						<h2>Contáctame</h2>
+						<p class="subtitulo"><em>"¿Tienes un proyecto en mente o te gustaría colaborar conmigo? Me
+								encantaría escucharte y dar vida a tus ideas a través del diseño y la fotografía."</em>
+						</p>
 
-				<div class="grupo-campo">
-					<label for="asunto">Asunto:</label>
-					<input type="text" id="asunto" name="asunto" maxlength="30" placeholder="Proyecto/Cotización" required>
+						<form name="Contáctame" action="Gracias.html" class="formulario-elegante">
+							<div class="grupo-campo">
+								<label for="nombre">Nombre / Empresa:</label>
+								<input type="text" id="nombre" name="nombre/empresa" maxlength="30"
+									placeholder="Coloca el nombre" required>
+							</div>
+
+							<div class="grupo-campo">
+								<label for="email">Correo electrónico:</label>
+								<input type="email" id="email" name="email" maxlength="30" placeholder="Coloca tu email"
+									required>
+							</div>
+
+							<div class="grupo-campo">
+								<label for="asunto">Asunto:</label>
+								<input type="text" id="asunto" name="asunto" maxlength="30"
+									placeholder="Proyecto/Cotización" required>
+							</div>
+
+							<div class="grupo-campo">
+								<label for="mensaje">Mensaje:</label>
+								<textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."
+									required></textarea>
+							</div>
+
+							<div class="grupo-botones">
+								<input type="reset" name="borrar" value="Borrar" class="btn-limpiar">
+								<input type="submit" name="enviar" value="Enviar" class="btn-enviar">
+							</div>
+						</form>
+					</section>
 				</div>
+			</div>
 
-				<div class="grupo-campo">
-					<label for="mensaje">Mensaje:</label>
-					<textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+			<div class="fila">
+				<div class="col12">
+					<section class="seccion-comunidad">
+						<h2>"Más allá de la cámara y el diseño"</h2>
+						<p>El portafolio es solo una parte de la historia. En mis redes sociales comparto mi proceso
+							creativo, proyectos recientes y la forma en la que veo el mundo día a día.</p>
+
+						<h3>Te invito a seguirme y formar parte de mi comunidad visual:</h3>
+						<p class="instagram-enlace">
+							<a href="https://www.instagram.com/p/DL_NpAcs4de/" target="_blank"
+								title="erli_graphy">@erli_graphy</a>
+						</p>
+					</section>
 				</div>
+			</div>
 
-				<div class="grupo-botones">
-					<input type="reset" name="borrar" value="Borrar" class="btn-limpiar">
-					<input type="submit" name="enviar" value="Enviar" class="btn-enviar">
-				</div>
-			</form>
-		</section>
+		</div>
+		<footer id="pie">
+			<img src="imagenes/abajo.png" alt="Pie de página ELC">
+		</footer>
 
-		<section class="seccion-comunidad">
-			<h2>"Más allá de la cámara y el diseño"</h2>	
-			<p>El portafolio es solo una parte de la historia. En mis redes sociales comparto mi proceso creativo, proyectos recientes y la forma en la que veo el mundo día a día.</p>
-			
-			<h3>Te invito a seguirme y formar parte de mi comunidad visual:</h3>
-			<p class="instagram-enlace">
-				<a href="https://www.instagram.com/p/DL_NpAcs4de/" target="_blank" title="erli_graphy">@erli_graphy</a>
-			</p>
-		</section>
+	</div>
+</body>
 
-	</div><footer id="pie">
-		<img src="imagenes/abajo.png" alt="Pie de página ELC">
-	</footer>
-
-</div></body>
 </html>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos-pagina.css">
     <style>
-        /* CORRECCIÓN: Diseño horizontal, simétrico y animado para las 4 categorías superiores */
+        /* REQUISITO CLASSROOM: Estilos específicos para la visualización horizontal y responsiva */
         .categorias-linea {
             display: flex;
             flex-direction: row;
@@ -16,7 +16,6 @@
             gap: 15px;
             width: 100%;
             max-width: 900px;
-            /* Alineado armónicamente con el contenedor principal */
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -25,7 +24,6 @@
             flex: 1;
             min-width: 140px;
             height: 110px;
-            /* Altura compacta para evitar espacios muertos en la pantalla */
             position: relative;
             border-radius: 8px;
             overflow: hidden;
@@ -36,7 +34,6 @@
 
         .tarjeta-categoria:hover {
             transform: translateY(-4px);
-            /* Animación leve de elevación */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
         }
 
@@ -46,7 +43,6 @@
             object-fit: cover;
         }
 
-        /* CORRECCIÓN: Capa de texto siempre legible para que no se vea vacío */
         .capa-nombre {
             position: absolute;
             top: 0;
@@ -54,7 +50,6 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
-            /* Fondo oscuro sutil permanente */
             color: #fff;
             display: flex;
             justify-content: center;
@@ -62,16 +57,13 @@
             font-size: 1.15rem;
             font-weight: bold;
             opacity: 1 !important;
-            /* Fuerza a que siempre sea visible */
             transition: background-color 0.3s ease;
         }
 
         .tarjeta-categoria:hover .capa-nombre {
             background-color: rgba(0, 0, 0, 0.6);
-            /* Se oscurece un poco al poner el cursor */
         }
 
-        /* Mosaico horizontal para los productos inferiores */
         .tienda-mosaico-horizontal {
             display: flex;
             flex-direction: row;
@@ -110,7 +102,6 @@
             }
         }
 
-        /* Adaptación responsiva para pantallas medianas y móviles */
         @media (max-width: 768px) {
             .categorias-linea {
                 gap: 10px;
@@ -132,8 +123,6 @@
         }
 
         @media (max-width: 480px) {
-
-            /* En lugar de una lista vertical gigante, las 4 opciones superiores se ordenan en un cuadrante de 2x2 */
             .categorias-linea {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -170,9 +159,15 @@
         <hr>
 
         <div class="contenido-principal" style="margin-bottom: 0; padding-bottom: 0;">
-            <h2>Tienda Online</h2>
-            <p class="subtitulo">Selecciona una categoría y haz clic en cualquier imagen del mosaico horizontal para
-                adquirirla.</p>
+
+            <div class="fila">
+                <div class="col12">
+                    <h2>Tienda Online</h2>
+                    <p class="subtitulo">Selecciona una categoría y haz clic en cualquier imagen del mosaico horizontal
+                        para adquirirla.</p>
+                </div>
+            </div>
+
         </div>
 
         <main class="categorias-linea">

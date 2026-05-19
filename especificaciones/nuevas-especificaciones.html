@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos-pagina.css">
     <style>
-        /* Estilos específicos para que la tabla no se vea amontonada */
+        /* Estilos específicos para asegurar el orden visual de la tabla */
         .tabla-especificaciones {
             width: 100%;
             border-collapse: separate;
@@ -39,12 +39,12 @@
             border-bottom: none;
         }
 
-        /* Color alternado para las filas (da mucho orden visual) */
+        /* Color alternado para facilitar la lectura de las filas */
         .tabla-especificaciones tr:nth-child(even) {
             background-color: #f8fafc;
         }
 
-        /* Etiquetas visuales para la lista de categorías */
+        /* Estilos para la presentación de las categorías como etiquetas limpias */
         .contenedor-tags {
             display: flex;
             gap: 10px;
@@ -88,59 +88,63 @@
         <hr>
 
         <div class="contenido-principal">
-            <h2>Categorías Fotográficas</h2>
-            <p class="subtitulo">Especialidades visuales desarrolladas dentro del portafolio de la marca.</p>
 
-            <ul class="contenedor-tags">
-                <li class="tag-categoria">Paisajes</li>
-                <li class="tag-categoria">Eventos</li>
-                <li class="tag-categoria">Retrato</li>
-                <li class="tag-categoria">Productos</li>
-            </ul>
+            <div class="fila">
+                <div class="col12">
+                    <h2>Categorías Fotográficas</h2>
+                    <p class="subtitulo">Especialidades visuales desarrolladas dentro del portafolio de la marca.</p>
 
-            <h3 style="color: #0f172a; margin-bottom: 5px; text-align: center;">Especificaciones Técnicas</h3>
+                    <ul class="contenedor-tags">
+                        <li class="tag-categoria">Paisajes</li>
+                        <li class="tag-categoria">Eventos</li>
+                        <li class="tag-categoria">Retrato</li>
+                        <li class="tag-categoria">Productos</li>
+                    </ul>
 
-            <table class="tabla-especificaciones">
-                <thead>
-                    <tr>
-                        <th style="width: 20%;">Categoría</th>
-                        <th style="width: 40%;">Enfoque y Objetivo</th>
-                        <th style="width: 40%;">Técnicas / Estilo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Paisaje</strong></td>
-                        <td>Captura de entornos abiertos y arquitectura con un énfasis en la composición y la luz
-                            natural.</td>
-                        <td>Uso de grandes angulares, profundidad de campo extensa y edición de alta fidelidad
-                            cromática.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Eventos</strong></td>
-                        <td>Documentación narrativa de momentos clave, capturando la esencia y atmósfera del lugar,
-                            guardando la espontaneidad de las personas.</td>
-                        <td>Fotoperiodismo digital, manejo de iluminación dinámica (flash/luz ambiente) y rapidez de
-                            captura.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Retrato</strong></td>
-                        <td>Conexión directa con el sujeto para transmitir personalidad, ya sea de forma natural o
-                            conceptual.</td>
-                        <td>Manejo de ópticas fijas (efecto bokeh), dirección de modelos y retoque de piel profesional
-                            no invasivo.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Producto</strong></td>
-                        <td>Resaltar las características comerciales de un objeto para catálogos, web o redes sociales.
-                        </td>
-                        <td>Control total de iluminación en estudio, manejo de reflejos, composición minimalista y
-                            styling de producto.</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <h3 style="color: #0f172a; margin-bottom: 5px; text-align: center;">Especificaciones Técnicas</h3>
+
+                    <table class="tabla-especificaciones">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Categoría</th>
+                                <th style="width: 40%;">Enfoque y Objetivo</th>
+                                <th style="width: 40%;">Técnicas / Estilo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paisaje</strong></td>
+                                <td>Captura de entornos abiertos y arquitectura con un énfasis en la composición y la
+                                    luz natural.</td>
+                                <td>Uso de grandes angulares, profundidad de campo extensa y edición de alta fidelidad
+                                    cromática.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Eventos</strong></td>
+                                <td>Documentación narrativa de momentos clave, capturando la esencia y atmósfera del
+                                    lugar, guardando la espontaneidad de las personas.</td>
+                                <td>Fotoperiodismo digital, manejo de iluminación dinámica (flash/luz ambiente) y
+                                    rapidez de captura.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Retrato</strong></td>
+                                <td>Conexión directa con el sujeto para transmitir personalidad, ya sea de forma natural
+                                    o conceptual.</td>
+                                <td>Manejo de ópticas fijas (efecto bokeh), dirección de modelos y retoque de piel
+                                    profesional no invasivo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Producto</strong></td>
+                                <td>Resaltar las características comerciales de un objeto para catálogos, web o redes
+                                    sociales.</td>
+                                <td>Control total de iluminación en estudio, manejo de reflejos, composición minimalista
+                                    y styling de producto.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
         <footer id="pie"><img src="../imagenes/abajo.png" alt="Pie de página ELC">
         </footer>
     </div>
