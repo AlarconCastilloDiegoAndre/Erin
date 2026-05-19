@@ -1,94 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Categorías</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Categorías - ELC</title>
+    <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos-pagina.css">
+    <style>
+        /* Estilos específicos para que la tabla no se vea amontonada */
+        .tabla-especificaciones {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
 
-	<link rel="stylesheet" type="text/css" href="../css/reticula12.css">
-	<link rel="stylesheet" type="text/css" href="../css/estilos-pagina.css">
+        .tabla-especificaciones th {
+            background-color: #0f172a;
+            color: white;
+            padding: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
 
+        .tabla-especificaciones td {
+            padding: 16px;
+            border-bottom: 1px solid #edf2f7;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .tabla-especificaciones tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Color alternado para las filas (da mucho orden visual) */
+        .tabla-especificaciones tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Etiquetas visuales para la lista de categorías */
+        .contenedor-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0 40px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tag-categoria {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
+
 <body>
 
-<div id="pagina"><!--Inicio de página-->
+    <div id="pagina">
+        <header id="cabecera"><img src="../imagenes/cabecera.jpg" alt="Cabecera ELC">
+        </header>
+        <hr>
 
-<header id="cabecera"><!--Inicio de cabecera-->
-		<img src="../imagenes/cabecera.jpg">
-</header><!--Cierre de cabecera-->
+        <nav id="menu">
+            <ul id="lista-menu">
+                <li><a href="../pagina-web.html" title="INICIO">INICIO</a></li>
+                <li><a href="../quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
+                <li><a href="../trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
+                <li><a href="nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
+                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+                <li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
+                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+            </ul>
+        </nav>
 
-<nav id="menu"><!--Inicio de menú-->
-	<ul>
-		<li><a href="../quien-soy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
-		<li><a href="../trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
-		<li><a href="../pagina-web.html" title="INICIO">INICIO</a></li>
-		<li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-		<li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-		<li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-	</ul>		
-</nav><!--Cierre de menú-->
+        <hr>
 
-<h1>Categorías:</h1>
-	
-	<ul>
-		<li>Paisajes</li>
-		<li>Eventos</li>
-		<li>Retrato</li>
-		<li>Productos</li>
-	</ul>
+        <div class="contenido-principal">
+            <h2>Categorías Fotográficas</h2>
+            <p class="subtitulo">Especialidades visuales desarrolladas dentro del portafolio de la marca.</p>
 
-<br>
+            <ul class="contenedor-tags">
+                <li class="tag-categoria">Paisajes</li>
+                <li class="tag-categoria">Eventos</li>
+                <li class="tag-categoria">Retrato</li>
+                <li class="tag-categoria">Productos</li>
+            </ul>
 
-<h2>Especificaciones de Categorías:</h2>
+            <h3 style="color: #0f172a; margin-bottom: 5px; text-align: center;">Especificaciones Técnicas</h3>
 
-<table>
+            <table class="tabla-especificaciones">
                 <thead>
                     <tr>
-                        <th>Categoría</th>
-                        <th>Enfoque y objetivo</th>
-                        <th>Tecnicas/estilo</th>
+                        <th style="width: 20%;">Categoría</th>
+                        <th style="width: 40%;">Enfoque y Objetivo</th>
+                        <th style="width: 40%;">Técnicas / Estilo</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Paisaje</td>
-                        <td>Captura de entornos abiertos y arquitectura con un énfasis en la composición y la luz natural.</td>
-                        <td>Uso de grandes angulares, profundidad de campo extensa y edición de alta fidelidad cromática.</td>
+                        <td><strong>Paisaje</strong></td>
+                        <td>Captura de entornos abiertos y arquitectura con un énfasis en la composición y la luz
+                            natural.</td>
+                        <td>Uso de grandes angulares, profundidad de campo extensa y edición de alta fidelidad
+                            cromática.</td>
                     </tr>
-
                     <tr>
-                        <td>Paisaje</td>
-                        <td>Captura de entornos abiertos y arquitectura con un énfasis en la composición y la luz natural.</td>
-                        <td>Uso de grandes angulares, profundidad de campo extensa y edición de alta fidelidad cromática.</td>
+                        <td><strong>Eventos</strong></td>
+                        <td>Documentación narrativa de momentos clave, capturando la esencia y atmósfera del lugar,
+                            guardando la espontaneidad de las personas.</td>
+                        <td>Fotoperiodismo digital, manejo de iluminación dinámica (flash/luz ambiente) y rapidez de
+                            captura.</td>
                     </tr>
-
                     <tr>
-                        <td>Eventos</td>
-                        <td>Documentación narrativa de momentos clave, capturando la esencia y atmósfera del lugar, capturando igualmente la naturaleza de las personas o eventos.</td>
-                        <td>Fotoperiodismo digital, manejo de iluminación dinámica (flash/luz ambiente) y rapidez de captura.</td>
+                        <td><strong>Retrato</strong></td>
+                        <td>Conexión directa con el sujeto para transmitir personalidad, ya sea de forma natural o
+                            conceptual.</td>
+                        <td>Manejo de ópticas fijas (efecto bokeh), dirección de modelos y retoque de piel profesional
+                            no invasivo.</td>
                     </tr>
-
                     <tr>
-                        <td>Retrato</td>
-                        <td>Conexión directa con el sujeto para transmitir personalidad, ya sea de forma natural o conceptual.</td>
-                        <td>Manejo de ópticas fijas (bokeh), dirección de modelos y retoque de piel profesional no invasivo.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Producto</td>
-                        <td>Resaltar las características comerciales de un objeto para catálogos, web o redes sociales.</td>
-                        <td>Control total de iluminación en estudio, manejo de reflejos, composición minimalista y styling.</td>
+                        <td><strong>Producto</strong></td>
+                        <td>Resaltar las características comerciales de un objeto para catálogos, web o redes sociales.
+                        </td>
+                        <td>Control total de iluminación en estudio, manejo de reflejos, composición minimalista y
+                            styling de producto.</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
 
-<a href="../pagina-web.html">ELC</a>
-
-<footer id="pie"><!--Inicio de pie-->
-	<img src="../imagenes/abajo.png">
-</footer><!--Cierre de pie-->
-
-</div><!--Cierre de página-->
-
+        <footer id="pie"><img src="../imagenes/abajo.png" alt="Pie de página ELC">
+        </footer>
+    </div>
 </body>
+
 </html>

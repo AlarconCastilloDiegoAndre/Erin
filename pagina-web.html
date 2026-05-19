@@ -1,104 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ELC-Photograph</title>
 	<link rel="stylesheet" type="text/css" href="css/reticula12.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos-pagina.css">
-
 </head>
-
 <body>
 
-	<div id="pagina"><!--Inicio de página-->
+<div id="pagina"><header class="video-header">
+		<video autoplay muted loop playsinline class="video-background">
+			<source src="202605142108.mp4" type="video/mp4">
+		</video>
+	</header>
 
-		<header class="video-header">
-			<video autoplay muted loop playsinline class="video-background">
-				<!-- Sustituye "tu-video.mp4" por la ruta de tu archivo -->
-				<source src="202605142108.mp4" type="video/mp4">
-			</video>
-		</header>
+	<header id="cabecera">
+		<img src="imagenes/cabecera.jpg" alt="Cabecera ELC">
+	</header>
 
-		<header id="cabecera"><!--Inicio de cabecera-->
-			<img src="imagenes/cabecera.jpg">
-		</header><!--Cierre de cabecera-->
+	<hr>
 
-		<hr>
+	<nav id="menu">
+		<ul id="lista-menu">
+			<li><a href="pagina-web.html" title="INICIO">INICIO</a></li>
+			<li><a href="quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
+			<li><a href="trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
+			<li><a href="especificaciones/nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
+			<li><a href="catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+			<li><a href="tienda/tienda.html" title="TIENDA">TIENDA</a></li>
+			<li><a href="preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+		</ul>		
+	</nav>
 
-		<nav id="menu">
-			<div class="menu-movil">
-				<button id="btn-hamburguesa">☰ Menú</button>
-			</div>
+	<hr>
 
-			<ul id="lista-menu">
-				<li><a href="quiensoy/quien-soy.html" title="¿QUIÉN SOY?">¿QUIÉN SOY?</a></li>
-				<li><a href="trayectoria/trayectoria.html" title="TRAYECTORÍA">TRAYECTORÍA</a></li>
-				<li><a href="especificaciones/nuevas-especificaciones.html" title="CATEGORÍAS">CATEGORÍAS</a></li>
-				<li><a href="catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-				<li><a href="tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-				<li><a href="preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-			</ul>
-		</nav>
-
-		<hr>
-
-		<p>ELC nació como una idea pequeña durante mis estudios y ha crecido hasta convertirse en lo que es hoy:
-			<strong>mi marca personal.</strong> En este sitio web de mi propia autoría, les comparto una parte esencial
-			de lo que soy y lo que me apasiona crear. Bienvenidos a una de mis formas favoritas para dar a conocer mi
-			interpretación de la comunicación visual.
+	<div class="contenido-principal">
+		
+		<p class="intro-texto">
+			ELC nació como una idea pequeña durante mis estudios y ha crecido hasta convertirse en lo que es hoy: <strong>mi marca personal.</strong> En este sitio web de mi propia autoría, les comparto una parte esencial de lo que soy y lo que me apasiona crear. Bienvenidos a una de mis formas favoritas para dar a conocer mi interpretación de la comunicación visual.
 		</p>
+		
+		<section class="seccion-contacto">
+			<h2>Contáctame</h2>
+			<p class="subtitulo"><em>"¿Tienes un proyecto en mente o te gustaría colaborar conmigo? Me encantaría escucharte y dar vida a tus ideas a través del diseño y la fotografía."</em></p>
 
-		<br>
+			<form name="Contáctame" action="Gracias.html" class="formulario-elegante">
+				<div class="grupo-campo">
+					<label for="nombre">Nombre / Empresa:</label>
+					<input type="text" id="nombre" name="nombre/empresa" maxlength="30" placeholder="Coloca el nombre" required>
+				</div>
 
-		<h2>Contáctame</h2>
-		<p><em>"¿Tienes un proyecto en mente o te gustaría colaborar conmigo? Me encantaría escucharte y dar vida a tus
-				ideas a través del diseño y la fotografía."</em></p>
+				<div class="grupo-campo">
+					<label for="email">Correo electrónico:</label>
+					<input type="email" id="email" name="email" maxlength="30" placeholder="Coloca tu email" required>
+				</div> 
 
-		<form name="Contáctame" action="Gracias.html">
-			<ul>
-				<li>Nombre / Empresa:<input type="text" name="nombre/empresa" maxlength="30"
-						placeholder="Coloca el nombre" required></li>
-				<li>Correo electrónico:<input type="text" name="email" maxlength="30" placeholder="Coloca tu email"
-						required></li>
-				<li>Asunto: <input type="text" name="asunto" maxlength="30" placeholder="Proyecto/Cotización" required>
-				</li>
-				<li>Mensaje:</li>
-				<li><textarea name="asunto" rows="6" cols="30"></textarea></li>
+				<div class="grupo-campo">
+					<label for="asunto">Asunto:</label>
+					<input type="text" id="asunto" name="asunto" maxlength="30" placeholder="Proyecto/Cotización" required>
+				</div>
 
-				<li><input type="reset" name="borrar" value="borrar"></li>
-				<li><input type="submit" name="enviar" value="enviar"></li>
-			</ul>
-		</form>
+				<div class="grupo-campo">
+					<label for="mensaje">Mensaje:</label>
+					<textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+				</div>
 
-		<br>
+				<div class="grupo-botones">
+					<input type="reset" name="borrar" value="Borrar" class="btn-limpiar">
+					<input type="submit" name="enviar" value="Enviar" class="btn-enviar">
+				</div>
+			</form>
+		</section>
 
-		<h2>"Más allá de la cámara y el diseño"</h2>
+		<section class="seccion-comunidad">
+			<h2>"Más allá de la cámara y el diseño"</h2>	
+			<p>El portafolio es solo una parte de la historia. En mis redes sociales comparto mi proceso creativo, proyectos recientes y la forma en la que veo el mundo día a día.</p>
+			
+			<h3>Te invito a seguirme y formar parte de mi comunidad visual:</h3>
+			<p class="instagram-enlace">
+				<a href="https://www.instagram.com/p/DL_NpAcs4de/" target="_blank" title="erli_graphy">@erli_graphy</a>
+			</p>
+		</section>
 
-		<p>El portafolio es solo una parte de la historia. En mis redes sociales comparto mi proceso creativo, proyectos
-			recientes y la forma en la que veo el mundo día a día.</p>
+	</div><footer id="pie">
+		<img src="imagenes/abajo.png" alt="Pie de página ELC">
+	</footer>
 
-		<br>
-
-		<h3>Te invito a seguirme y formar parte de mi comunidad visual:</h3>
-		<p><a href="https://www.instagram.com/p/DL_NpAcs4de/" target="new" title="erli_graphy">@erli_graphy</a></p>
-
-		<footer id="pie"><!--Inicio de pie-->
-			<img src="imagenes/abajo.png">
-		</footer><!--Cierre de pie-->
-
-	</div><!--Cierre de página-->
-
-	<script>
-		// Script básico para abrir/cerrar el menú en celulares
-		const btn = document.getElementById('btn-hamburguesa');
-		const menu = document.getElementById('lista-menu');
-		btn.addEventListener('click', () => {
-			menu.classList.toggle('mostrar-menu');
-		});
-	</script>
-
-</body>
-
+</div></body>
 </html>
