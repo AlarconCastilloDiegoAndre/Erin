@@ -1,0 +1,67 @@
+* {margin: 0;
+padding: 0}
+
+
+
+#cabecera video {position: relative;
+    height: 70vh; /* Ocupa el 70% del alto de la pantalla */
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;}
+
+.video-background {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;}
+
+
+/* --- VERSIÓN COMPUTADORA MENU (Pleca Horizontal Completa) --- */
+@media (min-width: 48em) { /* Pantallas mayores a 768px */
+    
+    #menu {
+        height: 50px; 
+        min-height: 50px;
+        background-image: url("../images/pleca.png"); 
+        background-color: #000000;
+    }
+
+    #menu .menu-icon, 
+    #menu .menu-btn {
+        display: none !important; /* Desaparece por completo la hamburguesa en PC */
+    }
+
+    #menu ul {
+        max-height: none;
+        overflow: visible;
+        display: flex;            /* Alineación horizontal en PC */
+        justify-content: center;  /* Centra tus botones */
+        background-color: transparent;
+    }
+
+    #menu ul li {
+        display: inline-block;
+        width: auto;
+    }
+
+    #menu ul li a {
+        padding-top: 15px; 
+        width: 160px; 
+        height: 35px; 
+        display: block; 
+        text-align: center; 
+        border-bottom: none;
+        transition: ease-in-out 900ms; 
+    }
+
+    #menu ul li a:hover {
+        background-color: #900603; 
+        transition: ease-in-out 900ms;
+    }
+}
