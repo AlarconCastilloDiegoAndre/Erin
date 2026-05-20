@@ -8,14 +8,15 @@
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <style>
-        /* Estilos elegantes para el formulario de la tienda */
+        /* Estilos elegantes para el formulario de la tienda adaptados a la paleta */
         .formulario-elegante {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 15px rgba(43, 23, 0, 0.05);
+            border: 1px solid rgba(43, 23, 0, 0.15);
             font-family: 'Calibri Light', Calibri, sans-serif;
+            color: #2b1700;
         }
 
         .grupo-form {
@@ -26,7 +27,7 @@
             display: block;
             font-weight: bold;
             margin-bottom: 8px;
-            color: #1a1a1a;
+            color: #2b1700;
         }
 
         .grupo-form input[type="text"],
@@ -36,15 +37,27 @@
         .grupo-form textarea {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid rgba(43, 23, 0, 0.2);
             border-radius: 4px;
             font-family: 'Calibri Light', Calibri, sans-serif;
             font-size: 1rem;
             box-sizing: border-box;
+            color: #2b1700;
+            background-color: #ffffff;
         }
 
+        .grupo-form input:focus,
+        .grupo-form select:focus,
+        .grupo-form textarea:focus {
+            border-color: #900603;
+            outline: none;
+        }
+
+        .grupo-form input[type="browse"],
         .grupo-form input[type="radio"] {
             margin-right: 8px;
+            accent-color: #900603;
+            /* Color de control de radio en el rojo de acento */
         }
 
         .opciones-radio {
@@ -55,16 +68,18 @@
 
         .seccion-oculta {
             display: none;
-            background-color: #fcfcfc;
+            background-color: rgba(43, 23, 0, 0.02);
             padding: 20px;
-            border-left: 3px solid #1a1a1a;
+            border-left: 3px solid #900603;
+            /* Detalle de resalte en rojo */
             margin-top: 15px;
             border-radius: 0 4px 4px 0;
         }
 
         .btn-enviar {
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #900603;
+            /* Rojo de acento principal */
+            color: #ffffff;
             border: none;
             padding: 12px 30px;
             font-size: 1.1rem;
@@ -74,17 +89,19 @@
             width: 100%;
             font-weight: bold;
             margin-top: 20px;
+            letter-spacing: 0.5px;
         }
 
         .btn-enviar:hover {
-            background-color: #333;
+            background-color: #2b1700;
+            /* Cambia a marrón profundo en hover */
         }
 
         h3.seccion-form {
             font-family: 'Edwardian Script ITC', cursive;
-            font-size: 2.2rem;
-            color: #1a1a1a;
-            border-bottom: 1px solid #eaeaea;
+            font-size: 2.4rem;
+            color: #2b1700;
+            border-bottom: 1px solid rgba(43, 23, 0, 0.15);
             padding-bottom: 5px;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -104,13 +121,14 @@
 
         <nav id="menu">
             <ul id="lista-menu">
-                <li><a href="../index.html" title="INICIO">INICIO</a></li>
-                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                <li><a href="../index.html#sobre-mi" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="../index.html#areas" title="Áreas">Áreas</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="Especificaciones">Especificaciones</a>
                 </li>
-                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-                <li><a href="tienda.html" title="TIENDA">TIENDA</a></li>
-                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-                <li><a href="../contacto/contacto.html" title="CONTACTO">CONTACTO</a></li>
+                <li><a href="../catalogo/catalogo.html" title="Catálogo">Catálogo</a></li>
+                <li><a href="tienda.html" title="Tienda">Tienda</a></li>
+                <li><a href="../preguntas/preguntas.html" title="Dudas">Dudas</a></li>
+                <li><a href="../contacto/contacto.html" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
 
@@ -120,10 +138,10 @@
 
             <div class="fila">
                 <div class="col12">
-                    <h2 class="titulo-artistico">Tienda de Autor</h2>
+                    <h2 class="titulo-artistico">Tienda Online</h2>
                     <p class="texto-cuerpo" style="text-align: center;">
-                        ¿Quieres comprar alguna de mis fotografías favoritas? Por favor, responde el siguiente
-                        formulario para procesar tu solicitud.
+                        ¿Quieres comprar alguna de mis fotografías favoritas? Por favor responde el siguiente
+                        formulario:
                     </p>
 
                     <form action="#" method="POST" class="formulario-elegante">
@@ -131,18 +149,19 @@
                         <h3 class="seccion-form">Sobre la Obra</h3>
 
                         <div class="grupo-form">
-                            <label for="nombre-foto">¿Qué fotografía te gustó? (Nombre de la obra):</label>
+                            <label for="nombre-foto">¿Qué fotografía te gustó?</label>
                             <input type="text" id="nombre-foto" name="nombre-foto" required
-                                placeholder="Ej. Retrato Ame, Sombras urbanas...">
+                                placeholder="(Escribe el nombre de la fotografía)">
                         </div>
 
                         <div class="grupo-form">
-                            <label>¿Deseas la fotografía en su tamaño original?</label>
+                            <label>¿Quieres la fotografía en tamaño real o te gustaría ajustar su tamaño?</label>
+                            <p style="margin: 5px 0; font-size: 0.95rem;">¿Deseas el tamaño original?</p>
                             <div class="opciones-radio">
                                 <label><input type="radio" name="tamano_original" value="si"
-                                        onclick="toggleTamano(true)" checked> Sí, tamaño original</label>
+                                        onclick="toggleTamano(true)" checked> Sí (pasa de pregunta)</label>
                                 <label><input type="radio" name="tamano_original" value="no"
-                                        onclick="toggleTamano(false)"> No, quiero ajustarlo</label>
+                                        onclick="toggleTamano(false)"> No (se abre caja para otra respuesta)</label>
                             </div>
                         </div>
 
@@ -155,7 +174,7 @@
                         <h3 class="seccion-form">Tus Datos</h3>
 
                         <div class="grupo-form">
-                            <label for="nombre-cliente">Nombre completo:</label>
+                            <label for="nombre-cliente">Nombre completo: *</label>
                             <input type="text" id="nombre-cliente" name="nombre-cliente" required>
                         </div>
 
@@ -176,27 +195,27 @@
                         </div>
 
                         <div class="grupo-form">
-                            <label for="origen">¿De dónde eres?</label>
-                            <input type="text" id="origen" name="origen" required placeholder="Ciudad y Estado">
+                            <label for="origen">¿De dónde eres? *</label>
+                            <input type="text" id="origen" name="origen" required>
                         </div>
 
-                        <h3 class="seccion-form">Método de Compra</h3>
+                        <h3 class="seccion-form">Forma de Compra</h3>
 
                         <div class="grupo-form">
-                            <label>¿Cómo sería tu compra?</label>
+                            <label>¿Cómo quieres comprarla?</label>
                             <div class="opciones-radio">
                                 <label><input type="radio" name="tipo_compra" value="fisica"
-                                        onclick="toggleCompra('fisica')" required> Compra física (Entrega en
-                                    persona)</label>
+                                        onclick="toggleCompra('fisica')" required> De manera física</label>
                                 <label><input type="radio" name="tipo_compra" value="virtual"
-                                        onclick="toggleCompra('virtual')"> Requiero envío (Virtual)</label>
+                                        onclick="toggleCompra('virtual')"> De manera virtual</label>
                             </div>
                         </div>
 
                         <div id="caja-fisica" class="seccion-oculta">
                             <div class="grupo-form">
-                                <label for="tel-fisico">Número telefónico (Para contactarte):</label>
-                                <input type="tel" id="tel-fisico" name="tel-fisico" placeholder="Ej. 442...">
+                                <label for="tel-fisico">Si tu respuesta fue de manera física, escribe tu número
+                                    telefónico para contactarme:</label>
+                                <input type="tel" id="tel-fisico" name="tel-fisico" placeholder="Caja de número">
                             </div>
                             <div class="grupo-form">
                                 <label for="dia-visita">¿Qué día te gustaría agendar una visita?</label>
@@ -205,46 +224,47 @@
                         </div>
 
                         <div id="caja-virtual" class="seccion-oculta">
-                            <p style="margin-top:0; font-weight:bold;">Proporciona tus datos de envío:</p>
+                            <p style="margin-top:0; font-weight:bold; color:#900603;">Si tu respuesta fue de manera
+                                virtual, proporcióname los siguientes datos:</p>
 
                             <div class="grupo-form">
-                                <label for="tel-virtual">Número telefónico:</label>
+                                <label for="tel-virtual">Número telefónico: (Obligatorio)</label>
                                 <input type="tel" id="tel-virtual" name="tel-virtual">
                             </div>
                             <div class="grupo-form">
-                                <label for="estado">Estado donde radicas:</label>
+                                <label for="estado">Estado en el que radicas: (Obligatorio)</label>
                                 <input type="text" id="estado" name="estado">
                             </div>
                             <div class="grupo-form">
-                                <label for="calle">Calle:</label>
+                                <label for="calle">Calle: (Obligatorio)</label>
                                 <input type="text" id="calle" name="calle">
                             </div>
                             <div class="opciones-radio">
                                 <div class="grupo-form" style="width:50%;">
-                                    <label for="num-ext">Número Exterior:</label>
+                                    <label for="num-ext">Número exterior: (Obligatorio)</label>
                                     <input type="text" id="num-ext" name="num-ext">
                                 </div>
                                 <div class="grupo-form" style="width:50%;">
-                                    <label for="num-int">Número Interior (Opcional):</label>
+                                    <label for="num-int">Número interior: (si no tienes, pasa al siguiente)</label>
                                     <input type="text" id="num-int" name="num-int">
                                 </div>
                             </div>
                             <div class="opciones-radio">
                                 <div class="grupo-form" style="width:70%;">
-                                    <label for="colonia">Colonia:</label>
+                                    <label for="colonia">Colonia: (Obligatorio)</label>
                                     <input type="text" id="colonia" name="colonia">
                                 </div>
                                 <div class="grupo-form" style="width:30%;">
-                                    <label for="cp">Código Postal:</label>
+                                    <label for="cp">Código postal: (Obligatorio)</label>
                                     <input type="text" id="cp" name="cp">
                                 </div>
                             </div>
                             <div class="grupo-form">
-                                <label for="calles">Entre qué calles estás:</label>
+                                <label for="calles">Entre que calles estas: (Obligatorio)</label>
                                 <input type="text" id="calles" name="calles">
                             </div>
                             <div class="grupo-form">
-                                <label for="caracteristicas">Características de tu vivienda (Opcional):</label>
+                                <label for="caracteristicas">Características de tu vivienda: (Opcional)</label>
                                 <textarea id="caracteristicas" name="caracteristicas" rows="2"
                                     placeholder="Color de fachada, portón, etc."></textarea>
                             </div>
@@ -281,9 +301,28 @@
             if (tipo === 'fisica') {
                 cajaFisica.style.display = 'block';
                 cajaVirtual.style.display = 'none';
+                // Hacer campos de física requeridos si se selecciona
+                document.getElementById('tel-fisico').required = true;
+                // Desmarcar obligatorios de virtual para que deje enviar
+                document.getElementById('tel-virtual').required = false;
+                document.getElementById('estado').required = false;
+                document.getElementById('calle').required = false;
+                document.getElementById('num-ext').required = false;
+                document.getElementById('colonia').required = false;
+                document.getElementById('cp').required = false;
+                document.getElementById('calles').required = false;
             } else if (tipo === 'virtual') {
                 cajaFisica.style.display = 'none';
                 cajaVirtual.style.display = 'block';
+                // Cambiar requeridos a virtual
+                document.getElementById('tel-fisico').required = false;
+                document.getElementById('tel-virtual').required = true;
+                document.getElementById('estado').required = true;
+                document.getElementById('calle').required = true;
+                document.getElementById('num-ext').required = true;
+                document.getElementById('colonia').required = true;
+                document.getElementById('cp').required = true;
+                document.getElementById('calles').required = true;
             }
         }
     </script>

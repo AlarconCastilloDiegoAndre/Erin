@@ -8,16 +8,17 @@
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <style>
-        /* Estilos para el formulario de agenda */
+        /* Estilos para el formulario de agenda adaptados a la nueva paleta */
         .formulario-elegante {
             background-color: #ffffff;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 20px rgba(43, 23, 0, 0.06);
+            border: 1px solid rgba(43, 23, 0, 0.15);
             max-width: 700px;
             margin: 0 auto 40px auto;
             font-family: 'Calibri Light', Calibri, sans-serif;
+            color: #2b1700;
         }
 
         .grupo-form {
@@ -28,7 +29,8 @@
             display: block;
             font-weight: bold;
             margin-bottom: 8px;
-            color: #1a1a1a;
+            color: #2b1700;
+            /* Marrón profundo */
         }
 
         .grupo-form input[type="text"],
@@ -39,23 +41,27 @@
         .grupo-form select {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid rgba(43, 23, 0, 0.2);
             border-radius: 4px;
             font-family: 'Calibri Light', Calibri, sans-serif;
             font-size: 1rem;
             box-sizing: border-box;
             transition: border-color 0.3s ease;
+            color: #2b1700;
+            background-color: #ffffff;
         }
 
         .grupo-form input:focus,
         .grupo-form select:focus {
-            border-color: #1a1a1a;
+            border-color: #900603;
+            /* Borde rojo de acento al enfocar */
             outline: none;
         }
 
         .btn-enviar {
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #900603;
+            /* Rojo de acento */
+            color: #ffffff;
             border: none;
             padding: 15px 30px;
             font-size: 1.15rem;
@@ -69,7 +75,8 @@
         }
 
         .btn-enviar:hover {
-            background-color: #444;
+            background-color: #2b1700;
+            /* Marrón profundo en hover */
         }
 
         .form-row {
@@ -102,13 +109,14 @@
 
         <nav id="menu">
             <ul id="lista-menu">
-                <li><a href="../index.html" title="INICIO">INICIO</a></li>
-                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                <li><a href="../index.html#sobre-mi" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="../index.html#areas" title="Áreas">Áreas</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="Especificaciones">Especificaciones</a>
                 </li>
-                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-                <li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-                <li><a href="contacto.html" title="CONTACTO">CONTACTO</a></li>
+                <li><a href="../catalogo/catalogo.html" title="Catálogo">Catálogo</a></li>
+                <li><a href="../tienda/tienda.html" title="Tienda">Tienda</a></li>
+                <li><a href="../preguntas/preguntas.html" title="Dudas">Dudas</a></li>
+                <li><a href="contacto.html" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
 
@@ -200,7 +208,7 @@
                         </div>
 
                         <button type="submit" class="btn-enviar">Agendar Sesión</button>
-                        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 15px;">* Campos
+                        <p style="text-align: center; font-size: 0.9rem; color: #900603; margin-top: 15px;">* Campos
                             obligatorios. La confirmación de la fecha está sujeta a disponibilidad de agenda.</p>
                     </form>
 

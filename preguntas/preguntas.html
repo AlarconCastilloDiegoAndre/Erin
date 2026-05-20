@@ -4,45 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes - PaOlí</title>
+    <title>Dudas - PaOlí</title>
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <style>
-        /* Estilos para el listado de preguntas */
+        /* Estilos para el listado de preguntas adaptados a la nueva paleta */
         .lista-preguntas {
             margin-bottom: 40px;
         }
 
         .pregunta-item {
             background-color: #ffffff;
-            border: 1px solid #eaeaea;
+            border: 1px solid rgba(43, 23, 0, 0.15);
             border-radius: 6px;
             padding: 20px;
             margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 2px 8px rgba(43, 23, 0, 0.02);
         }
 
         .pregunta-item h4 {
-            font-size: 1.15rem;
-            color: #1a1a1a;
+            font-size: 1.2rem;
+            color: #2b1700;
+            /* Marrón profundo */
             margin-top: 0;
             margin-bottom: 10px;
         }
 
         .pregunta-item p {
             margin: 0;
-            color: #444;
+            color: #2b1700;
             font-family: 'Calibri Light', Calibri, sans-serif;
             line-height: 1.6;
+            opacity: 0.9;
         }
 
-        /* Estilos reutilizados para el formulario pequeño */
+        /* Estilos para el formulario de dudas */
         .formulario-elegante {
             background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 15px rgba(43, 23, 0, 0.05);
+            border: 1px solid rgba(43, 23, 0, 0.15);
+            color: #2b1700;
         }
 
         .grupo-form {
@@ -53,23 +56,33 @@
             display: block;
             font-weight: bold;
             margin-bottom: 8px;
-            color: #1a1a1a;
+            color: #2b1700;
         }
 
         .grupo-form textarea,
         .grupo-form input[type="email"] {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid rgba(43, 23, 0, 0.2);
             border-radius: 4px;
             font-family: 'Calibri Light', Calibri, sans-serif;
             font-size: 1rem;
             box-sizing: border-box;
+            color: #2b1700;
+            background-color: #ffffff;
+        }
+
+        .grupo-form textarea:focus,
+        .grupo-form input[type="email"]:focus {
+            border-color: #900603;
+            /* Enfoque en rojo */
+            outline: none;
         }
 
         .btn-enviar {
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #900603;
+            /* Rojo de acento */
+            color: #ffffff;
             border: none;
             padding: 12px 30px;
             font-size: 1.1rem;
@@ -78,10 +91,12 @@
             transition: background-color 0.3s ease;
             width: 100%;
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         .btn-enviar:hover {
-            background-color: #333;
+            background-color: #2b1700;
+            /* Marrón profundo en hover */
         }
     </style>
 </head>
@@ -98,13 +113,14 @@
 
         <nav id="menu">
             <ul id="lista-menu">
-                <li><a href="../index.html" title="INICIO">INICIO</a></li>
-                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                <li><a href="../index.html#sobre-mi" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="../index.html#areas" title="Áreas">Áreas</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="Especificaciones">Especificaciones</a>
                 </li>
-                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-                <li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-                <li><a href="preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-                <li><a href="../contacto/contacto.html" title="CONTACTO">CONTACTO</a></li>
+                <li><a href="../catalogo/catalogo.html" title="Catálogo">Catálogo</a></li>
+                <li><a href="../tienda/tienda.html" title="Tienda">Tienda</a></li>
+                <li><a href="preguntas.html" title="Dudas">Dudas</a></li>
+                <li><a href="../contacto/contacto.html" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
 
@@ -116,7 +132,7 @@
                 <div class="col12">
                     <h2 class="titulo-artistico">Preguntas Frecuentes</h2>
                     <p class="texto-cuerpo" style="text-align: center; margin-bottom: 40px;">
-                        Conoce más acerca de mis procesos de trabajo, pagos y entrega de resultados.
+                        Resuelve tus dudas sobre mi proceso de trabajo, tiempos de entrega y condiciones del servicio.
                     </p>
 
                     <div class="lista-preguntas">
@@ -125,8 +141,9 @@
                             <h4>¿Cómo puedo agendar una sesión?</h4>
                             <p>Para empezar, envíame un correo electrónico con el asunto "SERVICIO FOTOGRÁFICO". En el
                                 cuerpo del correo, por favor incluye tu nombre completo, tu número telefónico y el tipo
-                                de servicio que deseas solicitar. Me pondré en contacto contigo a la brevedad para
-                                afinar todos los detalles.</p>
+                                de servicio de fotografía que deseas solicitar. Me pondré en contacto contigo a la
+                                brevedad a través del número telefónico que me proporcionaste para platicar y afinar
+                                todos los detalles.</p>
                         </div>
 
                         <div class="pregunta-item">
@@ -143,7 +160,7 @@
 
                         <div class="pregunta-item">
                             <h4>¿Puedes viajar a otro estado o país?</h4>
-                            <p>Por el momento no realizo viajes internacionales. Sin embargo, sí tengo disponibilidad
+                            <p>Por el momento no realizo viajes internacionales. Sin embargo, si tengo disponibilidad
                                 para viajar a otros estados de la República; toma en cuenta que todos los gastos de
                                 viáticos y traslado deberán correr por cuenta del cliente.</p>
                         </div>
@@ -162,9 +179,9 @@
 
                         <div class="pregunta-item">
                             <h4>¿Puedo llevar acompañantes a la sesión?</h4>
-                            <p>Si eres mayor de edad, puedes llevar a una sola persona como acompañante. Si el cliente
-                                es menor de edad, es indispensable que asista acompañado de un padre o tutor, quien
-                                deberá presentar una identificación oficial.</p>
+                            <p>Si el cliente es menor de edad, es indispensable que asista acompañado de un padre o
+                                tutor, quien deberá presentar una identificación oficial. Si eres mayor de edad, puedes
+                                llevar a una sola persona como acompañante.</p>
                         </div>
 
                         <div class="pregunta-item">

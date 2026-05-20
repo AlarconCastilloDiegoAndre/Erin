@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
     <link rel="stylesheet" type="text/css" href="../css/estilos.css">
     <style>
-        /* Estilos específicos para la Galería Mosaico interactiva */
+        /* Estilos específicos para la Galería Mosaico interactiva (NUEVA PALETA) */
         .filtros-galeria {
             display: flex;
             justify-content: center;
@@ -19,8 +19,10 @@
 
         .btn-filtro {
             background-color: transparent;
-            border: 1px solid #1a1a1a;
-            color: #1a1a1a;
+            border: 1px solid #2b1700;
+            /* Borde en marrón profundo */
+            color: #2b1700;
+            /* Texto en marrón profundo */
             padding: 10px 25px;
             font-family: 'Calibri Light', Calibri, sans-serif;
             font-size: 1rem;
@@ -31,8 +33,11 @@
 
         .btn-filtro:hover,
         .btn-filtro.activo {
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #900603;
+            /* Rojo de acento */
+            border-color: #900603;
+            color: #ffffff;
+            /* Letras blancas para contrastar */
         }
 
         /* Sistema moderno de Mosaico (CSS Grid) */
@@ -48,7 +53,8 @@
             height: 100%;
             overflow: hidden;
             border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(43, 23, 0, 0.05);
+            /* Sombra basada en el marrón */
             transition: transform 0.3s ease;
             /* Animación de entrada al filtrar */
             animation: fadeIn 0.5s ease-in-out;
@@ -65,6 +71,8 @@
         .item-galeria:hover {
             transform: translateY(-5px);
             z-index: 2;
+            box-shadow: 0 8px 15px rgba(144, 6, 3, 0.2);
+            /* Brillo rojo sutil al hacer hover */
         }
 
         .item-galeria:hover img {
@@ -124,13 +132,14 @@
 
         <nav id="menu">
             <ul id="lista-menu">
-                <li><a href="../index.html" title="INICIO">INICIO</a></li>
-                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                <li><a href="../index.html#sobre-mi" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="../index.html#areas" title="Áreas">Áreas</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="Especificaciones">Especificaciones</a>
                 </li>
-                <li><a href="catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
-                <li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
-                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
-                <li><a href="../contacto/contacto.html" title="CONTACTO">CONTACTO</a></li>
+                <li><a href="catalogo.html" title="Catálogo">Catálogo</a></li>
+                <li><a href="../tienda/tienda.html" title="Tienda">Tienda</a></li>
+                <li><a href="../preguntas/preguntas.html" title="Dudas">Dudas</a></li>
+                <li><a href="../contacto/contacto.html" title="Contacto">Contacto</a></li>
             </ul>
         </nav>
 

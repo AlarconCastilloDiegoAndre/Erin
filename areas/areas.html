@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de Especialidad - PaOlí</title>
+    <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Estilos específicos para la presentación extendida de áreas */
+        .contenedor-areas-detalle {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tarjeta-area-extendida {
+            background-color: #ffffff;
+            border: 1px solid rgba(43, 23, 0, 0.1);
+            border-left: 5px solid #2b1700;
+            /* Acento lateral en marrón profundo */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(43, 23, 0, 0.04);
+            transition: transform 0.3s ease, border-left-color 0.3s ease;
+        }
+
+        .tarjeta-area-extendida:hover {
+            transform: translateX(5px);
+            border-left-color: #900603;
+            /* El borde lateral cambia a rojo al pasar el mouse */
+        }
+
+        .tarjeta-area-extendida h3 {
+            font-family: 'Edwardian Script ITC', 'Brush Script MT', cursive;
+            font-size: 2.8rem;
+            color: #2b1700;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-area-extendida p {
+            font-family: 'Calibri Light', Calibri, sans-serif;
+            font-size: 1.1rem;
+            color: #2b1700;
+            line-height: 1.7;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pagina">
+        <header id="cabecera">
+            <img src="../images/images/cabecera.jpg" alt="Cabecera Artística PaOlí">
+        </header>
+
+        <hr>
+
+        <nav id="menu">
+            <ul id="lista-menu">
+                <li><a href="../index.html" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="areas.html" title="Áreas">Áreas</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="Especificaciones">Especificaciones</a>
+                </li>
+                <li><a href="../catalogo/catalogo.html" title="Catálogo">Catálogo</a></li>
+                <li><a href="../tienda/tienda.html" title="Tienda">Tienda</a></li>
+                <li><a href="../preguntas/preguntas.html" title="Dudas">Dudas</a></li>
+                <li><a href="../contacto/contacto.html" title="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <div class="contenido-principal">
+
+            <div class="fila">
+                <div class="col12">
+                    <h2 class="titulo-artistico">Áreas de Dedicación</h2>
+                    <p class="texto-cuerpo" style="text-align: center;">
+                        Como ya mencioné anteriormente, mis especialidades son:
+                    </p>
+
+                    <div class="contenedor-areas-detalle">
+
+                        <div class="tarjeta-area-extendida">
+                            <h3>Retrato tradicional</h3>
+                            <p>En esta categoría me enfoco en un estilo más minimalista, ideal para perfiles laborales,
+                                books profesionales o documentación formal.</p>
+                        </div>
+
+                        <div class="tarjeta-area-extendida">
+                            <h3>Retrato conceptual</h3>
+                            <p>Aquí, la libertad creativa queda completamente abierta al gusto del cliente. Además,
+                                ofrezco un servicio de asesoría personalizada en caso de que no se tenga una idea tan
+                                definida.</p>
+                        </div>
+
+                        <div class="tarjeta-area-extendida">
+                            <h3>Evento</h3>
+                            <p>En este rubro me adapto completamente al estilo que el cliente prefiera o, si lo desea,
+                                tomo la libertad creativa para capturar los momentos más espontáneos de la ocasión.
+                                Cubro tanto eventos al aire libre como en espacios cerrados.</p>
+                        </div>
+
+                        <div class="tarjeta-area-extendida">
+                            <h3>Producto</h3>
+                            <p>En este servicio también me ajusto a las necesidades del proyecto. Para este tipo de
+                                fotografía, es necesario que el cliente ya cuente con el producto físico y el material
+                                que desea fotografiar.</p>
+                        </div>
+
+                        <div class="tarjeta-area-extendida">
+                            <h3>Urbano</h3>
+                            <p>Este enfoque es mucho más íntimo y personal, con total libertad creativa, ya que aquí no
+                                ofrezco servicios fotográficos por encargo. En esta categoría, únicamente pongo a la
+                                venta las fotografías que ya forman parte de mi galería de autor.</p>
+                        </div>
+
+                    </div>
+
+                    <p class="texto-cuerpo"
+                        style="text-align: center; margin-top: 40px; font-weight: bold; color: #900603;">
+                        Cada una de ellas lleva una planeación y proceso diferentes. Te invito a visitar la sección de
+                        Especificaciones para conocer más en qué consiste cada una de ellas.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <footer id="pie">
+            <img src="../images/images/pie.jpg" alt="Pie de página PaOlí">
+        </footer>
+
+    </div>
+</body>
+
+</html>

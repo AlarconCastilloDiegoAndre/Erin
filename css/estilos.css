@@ -1,39 +1,36 @@
 /* =========================================
-   1. ESTILOS GENERALES Y TIPOGRAFÍAS
+   1. ESTILOS GENERALES Y PALETA DE COLORES
 ========================================= */
-/* REQUISITO: Tipografía Century Gothic Regular para cuerpo y Calibri Bold para apartados/subtemas */
+/* Fondo claro (#f2e6e3) y texto principal en marrón profundo (#2b1700) */
 body {
-    font-family: 'Century Gothic', sans-serif;
-    font-weight: normal;
+    font-family: 'Calibri Light', Calibri, sans-serif;
     line-height: 1.6;
     font-size: 1.1em;
-    background-color: #fcfcfc;
-    /* Fondo ligeramente gris para que no lastime la vista */
-    color: #2c2c2c;
+    background-color: #f2e6e3;
+    color: #2b1700;
     text-align: justify;
     margin: 0;
     padding: 0;
 }
 
-/* Títulos artísticos con la fuente solicitada */
+/* Títulos artísticos principales en marrón profundo */
 .titulo-artistico {
-    font-family: 'Calibri', sans-serif;
-    font-size: 3.5rem;
-    color: #1a1a1a;
+    font-family: 'Edwardian Script ITC', 'Brush Script MT', cursive;
+    font-size: 3.8rem;
+    color: #2b1700;
     text-align: center;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .texto-cuerpo {
-    font-family: 'Century Gothic', sans-serif;
-    font-weight: normal;
+    font-family: 'Calibri Light', Calibri, sans-serif;
     font-size: 1.15rem;
     margin-bottom: 20px;
     line-height: 1.8;
 }
 
-/* Evita desbordamientos de imágenes */
+/* Control de imágenes de cabecera y pie */
 #cabecera img,
 #pie img {
     width: 100%;
@@ -44,7 +41,8 @@ body {
 .divisor-suave {
     border: 0;
     height: 1px;
-    background: #e0e0e0;
+    background: rgba(43, 23, 0, 0.15);
+    /* Divisor sutil basado en el marrón oscuro */
     margin: 40px 0;
 }
 
@@ -53,7 +51,7 @@ body {
 ========================================= */
 .video-header {
     width: 100%;
-    background-color: #000;
+    background-color: #2b1700;
 }
 
 .video-background {
@@ -63,12 +61,12 @@ body {
 }
 
 /* =========================================
-   3. MENÚ DE NAVEGACIÓN (CSS FLEXBOX)
+   3. MENÚ DE NAVEGACIÓN (FLEXBOX)
 ========================================= */
 #menu {
     width: 100%;
-    background-color: #1a1a1a;
-    /* Menú oscuro elegante */
+    background-color: #2b1700;
+    /* Fondo del menú en marrón profundo */
 }
 
 #lista-menu {
@@ -76,7 +74,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* Adaptable a celulares */
+    /* Soporta perfectamente los 7 apartados responsivos */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -84,30 +82,32 @@ body {
 
 #lista-menu li {
     flex: 1 1 auto;
-    min-width: 120px;
+    min-width: 110px;
 }
 
 #lista-menu li a {
     text-decoration: none;
-    color: #f1f1f1;
+    color: #f2e6e3;
+    /* Texto del menú en tono claro */
     padding: 16px 10px;
     display: block;
     text-align: center;
-    font-family: 'Century Gothic', sans-serif;
+    font-family: 'Calibri Light', Calibri, sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
+/* Efecto Hover usando el rojo de acento (#900603) */
 #lista-menu li a:hover {
-    background-color: #333333;
-    color: #e2e8f0;
+    background-color: #900603;
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
 /* =========================================
-   4. ESTRUCTURA PRINCIPAL
+   4. ESTRUCTURA Y COMPONENTES DE CONTENIDO
 ========================================= */
 .contenido-principal {
     max-width: 950px;
@@ -115,7 +115,7 @@ body {
     padding: 0 20px;
 }
 
-/* Tarjetas de especialidades (Home) */
+/* Tarjetas informativas de las áreas */
 .contenedor-especialidades-resumen {
     display: flex;
     flex-wrap: wrap;
@@ -125,42 +125,49 @@ body {
 
 .tarjeta-resumen-area {
     background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    padding: 20px;
+    border: 1px solid rgba(43, 23, 0, 0.1);
+    padding: 25px;
     border-radius: 8px;
-    min-width: 200px;
+    min-width: 220px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 10px rgba(43, 23, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta-resumen-area h3 {
-    font-family: 'Calibri', sans-serif;
-    font-weight: bold;
-    font-size: 2.2rem;
+    font-family: 'Edwardian Script ITC', 'Brush Script MT', cursive;
+    font-size: 2.4rem;
     margin: 0;
-    color: #333;
+    color: #2b1700;
 }
 
 .tarjeta-resumen-area:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(43, 23, 0, 0.08);
+    border-color: #900603;
+    /* Borde resalta en rojo al pasar el cursor */
 }
 
 /* =========================================
-   5. REDES SOCIALES
+   5. REDES SOCIALES Y ENLACES
 ========================================= */
+.enlaces-redes-paoli p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
 .enlaces-redes-paoli a {
-    color: #1a1a1a;
+    color: #900603;
+    /* Enlaces en color rojo de acento */
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 1px solid #1a1a1a;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid #900603;
+    transition: all 0.3s ease;
 }
 
 .enlaces-redes-paoli a:hover {
-    color: #666;
-    border-bottom-color: #666;
+    color: #2b1700;
+    border-bottom-color: #2b1700;
 }
 
 /* =========================================
@@ -168,13 +175,12 @@ body {
 ========================================= */
 @media (max-width: 768px) {
     .titulo-artistico {
-        font-size: 2.8rem;
+        font-size: 3rem;
     }
 
     .texto-cuerpo {
-        font-size: 1rem;
-        text-align: left;
+        font-size: 1.05rem;
     }
 
-    /* Remove the fixed height for video header in mobile as it's now fully responsive */
+    /* Removed fixed height for video header on mobile */
 }
