@@ -1,67 +1,177 @@
-* {margin: 0;
-padding: 0}
+/* =========================================
+   1. ESTILOS GENERALES Y TIPOGRAFÍAS
+========================================= */
+/* REQUISITO: Tipografía Calibri light para cuerpo y Edwardian Script ITC para apartados */
+body {
+    font-family: 'Calibri Light', Calibri, sans-serif;
+    line-height: 1.6;
+    font-size: 1.1em;
+    background-color: #fcfcfc;
+    /* Fondo ligeramente gris para que no lastime la vista */
+    color: #2c2c2c;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
 
+/* Títulos artísticos con la fuente solicitada */
+.titulo-artistico {
+    font-family: 'Edwardian Script ITC', 'Brush Script MT', cursive;
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
 
+.texto-cuerpo {
+    font-family: 'Calibri Light', Calibri, sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
 
-#cabecera video {position: relative;
-    height: 70vh; /* Ocupa el 70% del alto de la pantalla */
+/* Evita desbordamientos de imágenes */
+#cabecera img,
+#pie img {
     width: 100%;
-    overflow: hidden;
+    height: auto;
     display: block;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffff;}
+}
+
+.divisor-suave {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 40px 0;
+}
+
+/* =========================================
+   2. ENCABEZADO CON VIDEO
+========================================= */
+.video-header {
+    width: 100%;
+    background-color: #000;
+}
 
 .video-background {
-    position: absolute;
-    top: 50%; left: 50%;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-    object-fit: cover;}
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
+/* =========================================
+   3. MENÚ DE NAVEGACIÓN (CSS FLEXBOX)
+========================================= */
+#menu {
+    width: 100%;
+    background-color: #1a1a1a;
+    /* Menú oscuro elegante */
+}
 
-/* --- VERSIÓN COMPUTADORA MENU (Pleca Horizontal Completa) --- */
-@media (min-width: 48em) { /* Pantallas mayores a 768px */
-    
-    #menu {
-        height: 50px; 
-        min-height: 50px;
-        background-image: url("../images/pleca.png"); 
-        background-color: #000000;
+#lista-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Adaptable a celulares */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-menu li {
+    flex: 1 1 auto;
+    min-width: 120px;
+}
+
+#lista-menu li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    padding: 16px 10px;
+    display: block;
+    text-align: center;
+    font-family: 'Calibri Light', Calibri, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+#lista-menu li a:hover {
+    background-color: #333333;
+    color: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   4. ESTRUCTURA PRINCIPAL
+========================================= */
+.contenido-principal {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tarjetas de especialidades (Home) */
+.contenedor-especialidades-resumen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.tarjeta-resumen-area {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-resumen-area h3 {
+    font-family: 'Edwardian Script ITC', 'Brush Script MT', cursive;
+    font-size: 2.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.tarjeta-resumen-area:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   5. REDES SOCIALES
+========================================= */
+.enlaces-redes-paoli a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #1a1a1a;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.enlaces-redes-paoli a:hover {
+    color: #666;
+    border-bottom-color: #666;
+}
+
+/* =========================================
+   6. RESPONSIVO BÁSICO
+========================================= */
+@media (max-width: 768px) {
+    .titulo-artistico {
+        font-size: 2.8rem;
     }
 
-    #menu .menu-icon, 
-    #menu .menu-btn {
-        display: none !important; /* Desaparece por completo la hamburguesa en PC */
+    .texto-cuerpo {
+        font-size: 1rem;
+        text-align: left;
     }
 
-    #menu ul {
-        max-height: none;
-        overflow: visible;
-        display: flex;            /* Alineación horizontal en PC */
-        justify-content: center;  /* Centra tus botones */
-        background-color: transparent;
-    }
-
-    #menu ul li {
-        display: inline-block;
-        width: auto;
-    }
-
-    #menu ul li a {
-        padding-top: 15px; 
-        width: 160px; 
-        height: 35px; 
-        display: block; 
-        text-align: center; 
-        border-bottom: none;
-        transition: ease-in-out 900ms; 
-    }
-
-    #menu ul li a:hover {
-        background-color: #900603; 
-        transition: ease-in-out 900ms;
-    }
+    /* Remove the fixed height for video header in mobile as it's now fully responsive */
 }

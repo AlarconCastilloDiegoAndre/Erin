@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Agenda - PaOlí</title>
+    <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Estilos para el formulario de agenda */
+        .formulario-elegante {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #eaeaea;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-family: 'Calibri Light', Calibri, sans-serif;
+        }
+
+        .grupo-form {
+            margin-bottom: 20px;
+        }
+
+        .grupo-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .grupo-form input[type="text"],
+        .grupo-form input[type="email"],
+        .grupo-form input[type="tel"],
+        .grupo-form input[type="date"],
+        .grupo-form input[type="number"],
+        .grupo-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Calibri Light', Calibri, sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .grupo-form input:focus,
+        .grupo-form select:focus {
+            border-color: #1a1a1a;
+            outline: none;
+        }
+
+        .btn-enviar {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.15rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #444;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .grupo-form {
+            flex: 1;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pagina">
+
+        <header id="cabecera">
+            <img src="../images/images/cabecera.jpg" alt="Cabecera Artística PaOlí">
+        </header>
+
+        <hr>
+
+        <nav id="menu">
+            <ul id="lista-menu">
+                <li><a href="../index.html" title="INICIO">INICIO</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                </li>
+                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+                <li><a href="../tienda/tienda.html" title="TIENDA">TIENDA</a></li>
+                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+                <li><a href="contacto.html" title="CONTACTO">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <div class="contenido-principal">
+
+            <div class="fila">
+                <div class="col12">
+                    <h2 class="titulo-artistico" style="font-size: 3.5rem;">Agendar una Sesión</h2>
+                    <p class="texto-cuerpo" style="text-align: center; margin-bottom: 40px;">
+                        Por favor, llena el siguiente formulario con tus datos para solicitar una sesión fotográfica. Me
+                        pondré en contacto contigo a la brevedad para afinar los detalles.
+                    </p>
+
+                    <form action="#" method="POST" class="formulario-elegante">
+
+                        <div class="form-row">
+                            <div class="grupo-form">
+                                <label for="nombre">1. Nombre(s): *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="apellidos">2. Apellidos: * <span
+                                        style="font-size: 0.85rem; font-weight: normal;">(Puedes colocar solo
+                                        uno)</span></label>
+                                <input type="text" id="apellidos" name="apellidos" required placeholder="Tus apellidos">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="grupo-form">
+                                <label for="apodo">3. Apodo: <span
+                                        style="font-size: 0.85rem; font-weight: normal;">(Opcional)</span></label>
+                                <input type="text" id="apodo" name="apodo" placeholder="¿Cómo prefieres que te llame?">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="identificacion">4. ¿Cómo te identificas? <span
+                                        style="font-size: 0.85rem; font-weight: normal;">(Opcional)</span></label>
+                                <select id="identificacion" name="identificacion">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="ella">Ella</option>
+                                    <option value="el">Él</option>
+                                    <option value="otro">Otro</option>
+                                    <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="origen">5. ¿De dónde eres? *</label>
+                            <input type="text" id="origen" name="origen" required placeholder="Ciudad y Estado">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="grupo-form">
+                                <label for="fecha-agenda">6. Día en el cual te gustaría agendar: *</label>
+                                <input type="date" id="fecha-agenda" name="fecha-agenda" required>
+                            </div>
+                            <div class="grupo-form">
+                                <label for="cantidad-sesiones">7. ¿Cuántas sesiones requieres? *</label>
+                                <input type="number" id="cantidad-sesiones" name="cantidad-sesiones" min="1" required
+                                    placeholder="Ej. 1">
+                            </div>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="servicio">8. ¿Cuál es el servicio fotográfico que requieres? *</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona una especialidad</option>
+                                <option value="tradicional">Retrato Tradicional</option>
+                                <option value="conceptual">Retrato Conceptual</option>
+                                <option value="eventos">Evento</option>
+                                <option value="producto">Producto</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="grupo-form">
+                                <label for="telefono">9. Número telefónico: *</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 442...">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="correo">10. Otro medio de contacto: * <span
+                                        style="font-size: 0.85rem; font-weight: normal;">(Solo correo
+                                        electrónico)</span></label>
+                                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Agendar Sesión</button>
+                        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 15px;">* Campos
+                            obligatorios. La confirmación de la fecha está sujeta a disponibilidad de agenda.</p>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="pie">
+            <img src="../images/images/pie.jpg" alt="Pie de página PaOlí">
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

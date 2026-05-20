@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - PaOlí</title>
+    <link rel="stylesheet" type="text/css" href="../css/reticula12.css">
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <style>
+        /* Estilos elegantes para el formulario de la tienda */
+        .formulario-elegante {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+            font-family: 'Calibri Light', Calibri, sans-serif;
+        }
+
+        .grupo-form {
+            margin-bottom: 20px;
+        }
+
+        .grupo-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .grupo-form input[type="text"],
+        .grupo-form input[type="tel"],
+        .grupo-form input[type="date"],
+        .grupo-form select,
+        .grupo-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: 'Calibri Light', Calibri, sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .grupo-form input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        .opciones-radio {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .seccion-oculta {
+            display: none;
+            background-color: #fcfcfc;
+            padding: 20px;
+            border-left: 3px solid #1a1a1a;
+            margin-top: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .btn-enviar {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #333;
+        }
+
+        h3.seccion-form {
+            font-family: 'Edwardian Script ITC', cursive;
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="pagina">
+
+        <header id="cabecera">
+            <img src="../images/images/cabecera.jpg" alt="Cabecera Artística PaOlí">
+        </header>
+
+        <hr>
+
+        <nav id="menu">
+            <ul id="lista-menu">
+                <li><a href="../index.html" title="INICIO">INICIO</a></li>
+                <li><a href="../especificaciones/especificaciones.html" title="ESPECIFICACIONES">ESPECIFICACIONES</a>
+                </li>
+                <li><a href="../catalogo/catalogo.html" title="CATÁLOGO">CATÁLOGO</a></li>
+                <li><a href="tienda.html" title="TIENDA">TIENDA</a></li>
+                <li><a href="../preguntas/preguntas.html" title="PREGUNTAS">PREGUNTAS</a></li>
+                <li><a href="../contacto/contacto.html" title="CONTACTO">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <div class="contenido-principal">
+
+            <div class="fila">
+                <div class="col12">
+                    <h2 class="titulo-artistico">Tienda de Autor</h2>
+                    <p class="texto-cuerpo" style="text-align: center;">
+                        ¿Quieres comprar alguna de mis fotografías favoritas? Por favor, responde el siguiente
+                        formulario para procesar tu solicitud.
+                    </p>
+
+                    <form action="#" method="POST" class="formulario-elegante">
+
+                        <h3 class="seccion-form">Sobre la Obra</h3>
+
+                        <div class="grupo-form">
+                            <label for="nombre-foto">¿Qué fotografía te gustó? (Nombre de la obra):</label>
+                            <input type="text" id="nombre-foto" name="nombre-foto" required
+                                placeholder="Ej. Retrato Ame, Sombras urbanas...">
+                        </div>
+
+                        <div class="grupo-form">
+                            <label>¿Deseas la fotografía en su tamaño original?</label>
+                            <div class="opciones-radio">
+                                <label><input type="radio" name="tamano_original" value="si"
+                                        onclick="toggleTamano(true)" checked> Sí, tamaño original</label>
+                                <label><input type="radio" name="tamano_original" value="no"
+                                        onclick="toggleTamano(false)"> No, quiero ajustarlo</label>
+                            </div>
+                        </div>
+
+                        <div class="grupo-form seccion-oculta" id="caja-tamano">
+                            <label for="tamano-deseado">¿Qué tamaño te gustaría?</label>
+                            <input type="text" id="tamano-deseado" name="tamano-deseado"
+                                placeholder="Ej. 8x10 pulgadas, 50x70 cm...">
+                        </div>
+
+                        <h3 class="seccion-form">Tus Datos</h3>
+
+                        <div class="grupo-form">
+                            <label for="nombre-cliente">Nombre completo:</label>
+                            <input type="text" id="nombre-cliente" name="nombre-cliente" required>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="apodo">Apodo (Opcional):</label>
+                            <input type="text" id="apodo" name="apodo">
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="identidad">¿Cómo te identificas? (Opcional):</label>
+                            <select id="identidad" name="identidad">
+                                <option value="">Selecciona una opción</option>
+                                <option value="ella">Ella</option>
+                                <option value="el">Él</option>
+                                <option value="otro">Otro</option>
+                                <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="origen">¿De dónde eres?</label>
+                            <input type="text" id="origen" name="origen" required placeholder="Ciudad y Estado">
+                        </div>
+
+                        <h3 class="seccion-form">Método de Compra</h3>
+
+                        <div class="grupo-form">
+                            <label>¿Cómo sería tu compra?</label>
+                            <div class="opciones-radio">
+                                <label><input type="radio" name="tipo_compra" value="fisica"
+                                        onclick="toggleCompra('fisica')" required> Compra física (Entrega en
+                                    persona)</label>
+                                <label><input type="radio" name="tipo_compra" value="virtual"
+                                        onclick="toggleCompra('virtual')"> Requiero envío (Virtual)</label>
+                            </div>
+                        </div>
+
+                        <div id="caja-fisica" class="seccion-oculta">
+                            <div class="grupo-form">
+                                <label for="tel-fisico">Número telefónico (Para contactarte):</label>
+                                <input type="tel" id="tel-fisico" name="tel-fisico" placeholder="Ej. 442...">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="dia-visita">¿Qué día te gustaría agendar una visita?</label>
+                                <input type="date" id="dia-visita" name="dia-visita">
+                            </div>
+                        </div>
+
+                        <div id="caja-virtual" class="seccion-oculta">
+                            <p style="margin-top:0; font-weight:bold;">Proporciona tus datos de envío:</p>
+
+                            <div class="grupo-form">
+                                <label for="tel-virtual">Número telefónico:</label>
+                                <input type="tel" id="tel-virtual" name="tel-virtual">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="estado">Estado donde radicas:</label>
+                                <input type="text" id="estado" name="estado">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="calle">Calle:</label>
+                                <input type="text" id="calle" name="calle">
+                            </div>
+                            <div class="opciones-radio">
+                                <div class="grupo-form" style="width:50%;">
+                                    <label for="num-ext">Número Exterior:</label>
+                                    <input type="text" id="num-ext" name="num-ext">
+                                </div>
+                                <div class="grupo-form" style="width:50%;">
+                                    <label for="num-int">Número Interior (Opcional):</label>
+                                    <input type="text" id="num-int" name="num-int">
+                                </div>
+                            </div>
+                            <div class="opciones-radio">
+                                <div class="grupo-form" style="width:70%;">
+                                    <label for="colonia">Colonia:</label>
+                                    <input type="text" id="colonia" name="colonia">
+                                </div>
+                                <div class="grupo-form" style="width:30%;">
+                                    <label for="cp">Código Postal:</label>
+                                    <input type="text" id="cp" name="cp">
+                                </div>
+                            </div>
+                            <div class="grupo-form">
+                                <label for="calles">Entre qué calles estás:</label>
+                                <input type="text" id="calles" name="calles">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="caracteristicas">Características de tu vivienda (Opcional):</label>
+                                <textarea id="caracteristicas" name="caracteristicas" rows="2"
+                                    placeholder="Color de fachada, portón, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Solicitar Compra</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <footer id="pie">
+            <img src="../images/images/pie.jpg" alt="Pie de página PaOlí">
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleTamano(esOriginal) {
+            const caja = document.getElementById('caja-tamano');
+            if (!esOriginal) {
+                caja.style.display = 'block';
+            } else {
+                caja.style.display = 'none';
+            }
+        }
+
+        function toggleCompra(tipo) {
+            const cajaFisica = document.getElementById('caja-fisica');
+            const cajaVirtual = document.getElementById('caja-virtual');
+
+            if (tipo === 'fisica') {
+                cajaFisica.style.display = 'block';
+                cajaVirtual.style.display = 'none';
+            } else if (tipo === 'virtual') {
+                cajaFisica.style.display = 'none';
+                cajaVirtual.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
